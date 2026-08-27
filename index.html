@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NormandieClim — Climatisation en Normandie</title>
+
+  <meta name="description"
+        content="NormandieClim : installation de climatisation monosplit 3,5 kW en Normandie. Offre simple, transparente et installation professionnelle.">
+
+  <style>
+    :root {
+      --bleu: #0878b9;
+      --bleu-fonce: #082d49;
+      --bleu-clair: #eaf7ff;
+      --texte: #203040;
+      --gris: #657687;
+      --blanc: #ffffff;
+      --bordure: #dce8ef;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--texte);
+      line-height: 1.6;
+      background: white;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1120px;
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--bordure);
+    }
+
+    .nav {
+      min-height: 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      color: var(--bleu-fonce);
+    }
+
+    .logo span {
+      color: var(--bleu);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--bleu);
+    }
+
+    .telephone {
+      background: var(--bleu-fonce);
+      color: white;
+      padding: 11px 17px;
+      border-radius: 10px;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: linear-gradient(135deg, #f7fcff, var(--bleu-clair));
+      padding: 85px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .sur-titre {
+      color: var(--bleu);
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      color: var(--bleu-fonce);
+      font-size: clamp(43px, 6vw, 68px);
+      line-height: 1.02;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: var(--bleu);
+    }
+
+    .hero-text {
+      color: var(--gris);
+      font-size: 19px;
+      max-width: 650px;
+      margin-bottom: 30px;
+    }
+
+    .boutons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .bouton {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 23px;
+      border-radius: 12px;
+      font-weight: bold;
+    }
+
+    .bouton-principal {
+      background: var(--bleu);
+      color: white;
+    }
+
+    .bouton-secondaire {
+      background: white;
+      border: 1px solid var(--bordure);
+      color: var(--bleu-fonce);
+    }
+
+    /* CARTE PRIX */
+
+    .carte-prix {
+      background: white;
+      border-radius: 25px;
+      padding: 32px;
+      box-shadow: 0 20px 55px rgba(8,45,73,.13);
+      border: 1px solid #e3edf2;
+    }
+
+    .clim-icon {
+      font-size: 45px;
+    }
+
+    .carte-prix h2 {
+      color: var(--bleu-fonce);
+      margin: 8px 0;
+      font-size: 25px;
+    }
+
+    .prix {
+      color: var(--bleu);
+      font-size: 46px;
+      font-weight: 900;
+      letter-spacing: -2px;
+    }
+
+    .prix small {
+      font-size: 17px;
+      color: var(--gris);
+      letter-spacing: 0;
+    }
+
+    .liste {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .liste li {
+      padding: 8px 0;
+      border-bottom: 1px solid #edf3f6;
+    }
+
+    .liste li::before {
+      content: "✓";
+      color: var(--bleu);
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .largeur {
+      width: 100%;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 80px 0;
+    }
+
+    .titre-section {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 45px;
+    }
+
+    .titre-section h2 {
+      color: var(--bleu-fonce);
+      font-size: 38px;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .titre-section p {
+      color: var(--gris);
+      font-size: 17px;
+    }
+
+    /* AVANTAGES */
+
+    .avantages {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 18px;
+    }
+
+    .avantage {
+      padding: 27px;
+      border: 1px solid var(--bordure);
+      border-radius: 20px;
+    }
+
+    .icone {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .avantage h3 {
+      color: var(--bleu-fonce);
+      margin-bottom: 8px;
+    }
+
+    .avantage p {
+      color: var(--gris);
+      font-size: 14px;
+    }
+
+    /* OFFRE */
+
+    .offre {
+      background: var(--bleu-fonce);
+      color: white;
+    }
+
+    .offre-grid {
+      display: grid;
+      grid-template-columns: 1fr .9fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .offre h2 {
+      font-size: 42px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .offre p {
+      color: #cbdce8;
+      font-size: 17px;
+    }
+
+    .offre-liste {
+      list-style: none;
+      margin-top: 25px;
+    }
+
+    .offre-liste li {
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    .offre-liste li::before {
+      content: "✓";
+      color: #70c7f3;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .boite-offre {
+      background: white;
+      color: var(--texte);
+      border-radius: 23px;
+      padding: 30px;
+    }
+
+    .boite-offre .grand-prix {
+      color: var(--bleu);
+      font-size: 47px;
+      font-weight: 900;
+    }
+
+    /* ETAPES */
+
+    .etapes {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 18px;
+    }
+
+    .etape {
+      padding: 28px;
+      background: #f7fbfe;
+      border: 1px solid var(--bordure);
+      border-radius: 20px;
+    }
+
+    .numero {
+      width: 39px;
+      height: 39px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--bleu);
+      color: white;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .etape h3 {
+      color: var(--bleu-fonce);
+      margin-bottom: 8px;
+    }
+
+    .etape p {
+      color: var(--gris);
+      font-size: 14px;
+    }
+
+    /* CTA */
+
+    .cta {
+      background: var(--bleu-clair);
+      text-align: center;
+    }
+
+    .cta h2 {
+      color: var(--bleu-fonce);
+      font-size: 42px;
+      line-height: 1.1;
+      margin-bottom: 13px;
+    }
+
+    .cta p {
+      color: var(--gris);
+      margin-bottom: 25px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 25px;
+    }
+
+    .contact-box,
+    .formulaire {
+      border: 1px solid var(--bordure);
+      border-radius: 20px;
+      padding: 30px;
+    }
+
+    .contact-box h3,
+    .formulaire h3 {
+      color: var(--bleu-fonce);
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .ligne-contact {
+      padding: 15px 0;
+      border-bottom: 1px solid var(--bordure);
+    }
+
+    .ligne-contact strong {
+      display: block;
+      color: var(--bleu-fonce);
+    }
+
+    .ligne-contact a {
+      color: var(--bleu);
+      font-weight: bold;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      font-size: 14px;
+      color: var(--bleu-fonce);
+      margin-bottom: 5px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #cbdbe5;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #071e30;
+      color: #b9cad5;
+      padding: 30px 0;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      color: white;
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    .footer-logo span {
+      color: #72c8f3;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero-grid,
+      .offre-grid,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .avantages,
+      .etapes {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    }
+
+    @media (max-width: 560px) {
+
+      section {
+        padding: 60px 0;
+      }
+
+      .avantages,
+      .etapes {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      h1 {
+        font-size: 45px;
+      }
+
+      .offre h2,
+      .cta h2,
+      .titre-section h2 {
+        font-size: 32px;
+      }
+
+      .prix,
+      .boite-offre .grand-prix {
+        font-size: 40px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+    <a href="#" class="logo">
+      Normandie<span>Clim</span>
+    </a>
+
+    <nav>
+      <a href="#offre">Notre offre</a>
+      <a href="#fonctionnement">Comment ça marche</a>
+      <a href="#contact">Contact</a>
+      <a class="telephone" href="tel:+33608358509">
+        06 08 35 85 09
+      </a>
+    </nav>
+
+    <a class="telephone" href="tel:+33608358509">
+      Appeler
+    </a>
+
+  </div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <div class="sur-titre">
+        Climatisation en Normandie
+      </div>
+
+      <h1>
+        La climatisation.<br>
+        <span>Simplement.</span>
+      </h1>
+
+      <p class="hero-text">
+        Installation de climatisation monosplit 3,5 kW
+        avec une offre claire, un prix transparent
+        et une pose professionnelle.
+      </p>
+
+      <div class="boutons">
+
+        <a href="#contact"
+           class="bouton bouton-principal">
+          Demander un devis
+        </a>
+
+        <a href="tel:+33608358509"
+           class="bouton bouton-secondaire">
+          📞 06 08 35 85 09
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="carte-prix">
+
+      <div class="clim-icon">
+        ❄️
+      </div>
+
+      <h2>
+        Monosplit 3,5 kW
+      </h2>
+
+      <div class="prix">
+        1 490 € <small>TTC</small>
+      </div>
+
+      <p>
+        Fourniture + installation
+      </p>
+
+      <ul class="liste">
+
+        <li>Climatisation 3,5 kW</li>
+        <li>Support mural</li>
+        <li>Liaisons frigorifiques</li>
+        <li>Installation complète</li>
+        <li>Mise en service</li>
+
+      </ul>
+
+      <a href="#contact"
+         class="bouton bouton-principal largeur">
+        Obtenir mon devis
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- AVANTAGES -->
+
+<section>
+
+  <div class="container">
+
+    <div class="titre-section">
+
+      <h2>
+        Une offre volontairement simple
+      </h2>
+
+      <p>
+        Une solution monosplit performante,
+        sans catalogue compliqué ni options inutiles.
+      </p>
+
+    </div>
+
+
+    <div class="avantages">
+
+      <div class="avantage">
+
+        <div class="icone">💶</div>
+
+        <h3>
+          Prix transparent
+        </h3>
+
+        <p>
+          Une offre claire avec fourniture
+          et installation comprises.
+        </p>
+
+      </div>
+
+
+      <div class="avantage">
+
+        <div class="icone">🔧</div>
+
+        <h3>
+          Pose soignée
+        </h3>
+
+        <p>
+          Une installation propre et réalisée
+          dans les règles professionnelles.
+        </p>
+
+      </div>
+
+
+      <div class="avantage">
+
+        <div class="icone">❄️</div>
+
+        <h3>
+          Confort toute l'année
+        </h3>
+
+        <p>
+          Climatisation réversible pour rafraîchir
+          en été et chauffer en complément.
+        </p>
+
+      </div>
+
+
+      <div class="avantage">
+
+        <div class="icone">🤝</div>
+
+        <h3>
+          Un seul interlocuteur
+        </h3>
+
+        <p>
+          De votre demande de devis à la mise
+          en service, un contact unique.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- OFFRE -->
+
+<section id="offre" class="offre">
+
+  <div class="container offre-grid">
+
+    <div>
+
+      <div class="sur-titre" style="color:#70c7f3">
+        L'offre NormandieClim
+      </div>
+
+      <h2>
+        Tout ce qu'il faut.<br>
+        Rien de superflu.
+      </h2>
+
+      <p>
+        Nous avons conçu une offre simple pour faciliter
+        votre projet et vous permettre de connaître
+        rapidement votre budget.
+      </p>
+
+      <ul class="offre-liste">
+
+        <li>Climatisation monosplit 3,5 kW</li>
+        <li>Fourniture du matériel</li>
+        <li>Support et liaisons frigorifiques</li>
+        <li>Pose et raccordements</li>
+        <li>Mise en service</li>
+
+      </ul>
+
+    </div>
+
+
+    <div class="boite-offre">
+
+      <strong>
+        OFFRE MONOSPLIT 3,5 kW
+      </strong>
+
+      <div class="grand-prix">
+        1 490 € TTC
+      </div>
+
+      <p>
+        Installation comprise*
+      </p>
+
+      <br>
+
+      <a href="#contact"
+         class="bouton bouton-principal largeur">
+        Demander un devis
+      </a>
+
+      <p style="font-size:12px;margin-top:14px;color:#657687">
+        *Tarif indicatif pour une installation standard,
+        sous réserve de faisabilité technique.
+        Les conditions exactes sont précisées sur le devis.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FONCTIONNEMENT -->
+
+<section id="fonctionnement">
+
+  <div class="container">
+
+    <div class="titre-section">
+
+      <h2>
+        Comment ça marche ?
+      </h2>
+
+      <p>
+        Un parcours simple, du premier contact
+        à la mise en service.
+      </p>
+
+    </div>
+
+
+    <div class="etapes">
+
+      <div class="etape">
+
+        <div class="numero">1</div>
+
+        <h3>
+          Votre demande
+        </h3>
+
+        <p>
+          Vous nous contactez par téléphone
+          ou via le formulaire en ligne.
+        </p>
+
+      </div>
+
+
+      <div class="etape">
+
+        <div class="numero">2</div>
+
+        <h3>
+          Étude du projet
+        </h3>
+
+        <p>
+          Nous échangeons sur votre logement
+          et l'emplacement souhaité.
+        </p>
+
+      </div>
+
+
+      <div class="etape">
+
+        <div class="numero">3</div>
+
+        <h3>
+          Installation
+        </h3>
+
+        <p>
+          La pose est réalisée proprement
+          selon les caractéristiques du chantier.
+        </p>
+
+      </div>
+
+
+      <div class="etape">
+
+        <div class="numero">4</div>
+
+        <h3>
+          Mise en service
+        </h3>
+
+        <p>
+          Votre installation est mise en route
+          et son fonctionnement vous est expliqué.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+  <div class="container">
+
+    <h2>
+      Envie de retrouver du confort chez vous ?
+    </h2>
+
+    <p>
+      Parlons de votre projet de climatisation.
+    </p>
+
+    <a href="#contact"
+       class="bouton bouton-principal">
+      Demander un devis gratuitement
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="titre-section">
+
+      <h2>
+        Votre projet commence ici
+      </h2>
+
+      <p>
+        Décrivez-nous votre besoin.
+        Nous vous recontactons pour étudier votre installation.
+      </p>
+
+    </div>
+
+
+    <div class="contact">
+
+
+      <div class="contact-box">
+
+        <h3>
+          Contactez-nous
+        </h3>
+
+        <div class="ligne-contact">
+
+          <strong>
+            📞 Téléphone
+          </strong>
+
+          <a href="tel:+33608358509">
+            06 08 35 85 09
+          </a>
+
+        </div>
+
+
+        <div class="ligne-contact">
+
+          <strong>
+            ✉️ Email
+          </strong>
+
+          <a href="mailto:contact@normandieclim.fr">
+            contact@normandieclim.fr
+          </a>
+
+        </div>
+
+
+        <div class="ligne-contact">
+
+          <strong>
+            📍 Zone d'intervention
+          </strong>
+
+          Normandie et alentours
+
+        </div>
+
+
+        <p style="margin-top:20px;color:#657687;font-size:14px">
+
+          Pour une demande de devis, indiquez votre commune,
+          la pièce à climatiser et, si possible, quelques photos
+          de l'intérieur et de l'extérieur.
+
+        </p>
+
+      </div>
+
+
+      <div class="formulaire">
+
+        <h3>
+          Demande de devis
+        </h3>
+
+        <form action="mailto:contact@normandieclim.fr"
+              method="post"
+              enctype="text/plain">
+
+          <div>
+
+            <label for="nom">
+              Nom
+            </label>
+
+            <input
+              id="nom"
+              name="Nom"
+              type="text"
+              required>
+
+          </div>
+
+
+          <div>
+
+            <label for="telephone">
+              Téléphone
+            </label>
+
+            <input
+              id="telephone"
+              name="Telephone"
+              type="tel"
+              required>
+
+          </div>
+
+
+          <div>
+
+            <label for="commune">
+              Commune
+            </label>
+
+            <input
+              id="commune"
+              name="Commune"
+              type="text"
+              required>
+
+          </div>
+
+
+          <div>
+
+            <label for="projet">
+              Votre projet
+            </label>
+
+            <select id="projet" name="Projet">
+
+              <option>
+                Monosplit 3,5 kW
+              </option>
+
+              <option>
+                Je ne sais pas encore
+              </option>
+
+              <option>
+                Autre demande
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div>
+
+            <label for="message">
+              Message
+            </label>
+
+            <textarea
+              id="message"
+              name="Message"
+              placeholder="Décrivez brièvement votre besoin..."></textarea>
+
+          </div>
+
+
+          <button
+            class="bouton bouton-principal"
+            type="submit">
+
+            Envoyer ma demande
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer">
+
+    <div class="footer-logo">
+      Normandie<span>Clim</span>
+    </div>
+
+    <div>
+      © 2026 NormandieClim
+    </div>
+
+    <div>
+
+      <a href="mailto:contact@normandieclim.fr">
+        contact@normandieclim.fr
+      </a>
+
+      ·
+
+      <a href="tel:+33608358509">
+        06 08 35 85 09
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
