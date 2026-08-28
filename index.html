@@ -1,1141 +1,2359 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>NormandieClim — Climatisation en Normandie</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-        content="NormandieClim : installation de climatisation monosplit 3,5 kW en Normandie. Offre simple, transparente et installation professionnelle.">
+<title>NormandieClim — Climatisation réversible en Normandie</title>
 
-  <style>
-    :root {
-      --bleu: #0878b9;
-      --bleu-fonce: #082d49;
-      --bleu-clair: #eaf7ff;
-      --texte: #203040;
-      --gris: #657687;
-      --blanc: #ffffff;
-      --bordure: #dce8ef;
-    }
+<meta name="description"
+content="NormandieClim installe votre climatisation réversible en Normandie. Chambre, salon ou grande pièce : choisissez simplement la solution adaptée à votre logement. Pose et mise en service tout compris.">
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
 
-    html {
-      scroll-behavior: smooth;
-    }
+:root {
+    --bleu: #0878b9;
+    --bleu-fonce: #082d49;
+    --bleu-clair: #eaf7ff;
+    --bleu-tres-clair: #f6fbfe;
+    --texte: #203040;
+    --gris: #657687;
+    --blanc: #ffffff;
+    --bordure: #dce8ef;
+    --vert: #16845b;
+    --ombre: 0 18px 50px rgba(8,45,73,.12);
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--texte);
-      line-height: 1.6;
-      background: white;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    .container {
-      width: 92%;
-      max-width: 1120px;
-      margin: auto;
-    }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texte);
+    line-height: 1.6;
+    background: white;
+}
 
-    /* HEADER */
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,.96);
-      border-bottom: 1px solid var(--bordure);
-    }
+.container {
+    width: 92%;
+    max-width: 1150px;
+    margin: auto;
+}
 
-    .nav {
-      min-height: 75px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
 
-    .logo {
-      font-size: 25px;
-      font-weight: 900;
-      color: var(--bleu-fonce);
-    }
+/* =========================
+   HEADER
+========================= */
 
-    .logo span {
-      color: var(--bleu);
-    }
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,.97);
+    border-bottom: 1px solid var(--bordure);
+    backdrop-filter: blur(10px);
+}
+
+.nav {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--bleu-fonce);
+    letter-spacing: -.8px;
+}
+
+.logo span {
+    color: var(--bleu);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--bleu);
+}
+
+.telephone {
+    background: var(--bleu-fonce);
+    color: white !important;
+    padding: 11px 17px;
+    border-radius: 11px;
+}
+
+.mobile-call {
+    display: none;
+}
+
+
+/* =========================
+   BOUTONS
+========================= */
+
+.bouton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 23px;
+    border-radius: 12px;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.bouton-principal {
+    background: var(--bleu);
+    color: white;
+}
+
+.bouton-principal:hover {
+    background: #06699f;
+    transform: translateY(-2px);
+}
+
+.bouton-secondaire {
+    background: white;
+    color: var(--bleu-fonce);
+    border: 1px solid var(--bordure);
+}
+
+.largeur {
+    width: 100%;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background:
+        radial-gradient(circle at 90% 10%, rgba(19,119,185,.12), transparent 35%),
+        linear-gradient(135deg, #f7fcff, var(--bleu-clair));
+
+    padding: 85px 0 80px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.sur-titre {
+    color: var(--bleu);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: var(--bleu-fonce);
+    font-size: clamp(43px, 6vw, 68px);
+    line-height: 1.02;
+    letter-spacing: -2.5px;
+    margin-bottom: 23px;
+}
+
+h1 span {
+    color: var(--bleu);
+}
+
+.hero-text {
+    color: var(--gris);
+    font-size: 19px;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.boutons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.hero-points {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-top: 27px;
+    color: var(--bleu-fonce);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hero-points span::before {
+    content: "✓";
+    color: var(--bleu);
+    margin-right: 6px;
+}
+
+
+/* =========================
+   CARTE HERO
+========================= */
+
+.hero-card {
+    background: white;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: var(--ombre);
+    border: 1px solid #e1edf3;
+}
+
+.hero-image {
+    height: 230px;
+    background: var(--bleu-clair);
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-card-content {
+    padding: 27px 30px 30px;
+}
+
+.hero-card h2 {
+    color: var(--bleu-fonce);
+    font-size: 25px;
+    margin-bottom: 6px;
+}
+
+.hero-card-text {
+    color: var(--gris);
+    margin-bottom: 18px;
+}
+
+.hero-price {
+    color: var(--bleu);
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.hero-price small {
+    font-size: 16px;
+    color: var(--gris);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 82px 0;
+}
+
+.titre-section {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 48px;
+}
+
+.titre-section h2 {
+    color: var(--bleu-fonce);
+    font-size: 39px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 14px;
+}
+
+.titre-section p {
+    color: var(--gris);
+    font-size: 17px;
+}
+
+
+/* =========================
+   EXPLICATION SIMPLE
+========================= */
+
+.explique {
+    background: var(--bleu-tres-clair);
+}
+
+.explique-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.explique h2 {
+    color: var(--bleu-fonce);
+    font-size: 39px;
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.explique p {
+    color: var(--gris);
+    font-size: 17px;
+    margin-bottom: 17px;
+}
+
+.explication-card {
+    background: white;
+    border-radius: 25px;
+    padding: 32px;
+    box-shadow: var(--ombre);
+}
+
+.explication-item {
+    display: flex;
+    gap: 16px;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--bordure);
+}
+
+.explication-item:last-child {
+    border-bottom: none;
+}
+
+.explication-icon {
+    font-size: 29px;
+    min-width: 42px;
+}
+
+.explication-item strong {
+    color: var(--bleu-fonce);
+    display: block;
+    margin-bottom: 3px;
+}
+
+.explication-item p {
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* =========================
+   FORFAITS
+========================= */
+
+.forfaits {
+    background: white;
+}
+
+.forfaits-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.forfait {
+    border: 1px solid var(--bordure);
+    border-radius: 24px;
+    overflow: hidden;
+    background: white;
+    position: relative;
+    transition: .2s;
+}
+
+.forfait:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--ombre);
+}
+
+.forfait-image {
+    height: 210px;
+    background: var(--bleu-clair);
+    overflow: hidden;
+}
+
+.forfait-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.forfait-content {
+    padding: 25px;
+}
+
+.forfait-tag {
+    display: inline-block;
+    background: var(--bleu-clair);
+    color: var(--bleu);
+    font-size: 12px;
+    font-weight: 900;
+    padding: 6px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.forfait h3 {
+    color: var(--bleu-fonce);
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.forfait-surface {
+    color: var(--gris);
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+
+.forfait-price {
+    color: var(--bleu);
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 17px;
+}
+
+.forfait-price small {
+    color: var(--gris);
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.forfait ul {
+    list-style: none;
+    margin-bottom: 22px;
+}
+
+.forfait li {
+    padding: 7px 0;
+    color: var(--gris);
+    font-size: 14px;
+}
+
+.forfait li::before {
+    content: "✓";
+    color: var(--vert);
+    font-weight: 900;
+    margin-right: 8px;
+}
+
+.forfait-populaire {
+    border: 2px solid var(--bleu);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--bleu);
+    color: white;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+
+/* =========================
+   CHAUFFAGE
+========================= */
+
+.chauffage {
+    background: var(--bleu-fonce);
+    color: white;
+}
+
+.chauffage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.chauffage h2 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.chauffage h2 span {
+    color: #70c7f3;
+}
+
+.chauffage-text {
+    color: #cbdce8;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.chauffage-points {
+    display: grid;
+    gap: 14px;
+}
+
+.chauffage-point {
+    display: flex;
+    gap: 13px;
+    align-items: flex-start;
+}
+
+.chauffage-point-icon {
+    font-size: 23px;
+}
+
+.chauffage-point strong {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.chauffage-point p {
+    color: #b9cad5;
+    font-size: 14px;
+}
+
+.chauffage-card {
+    background: white;
+    color: var(--texte);
+    border-radius: 25px;
+    padding: 32px;
+}
+
+.chauffage-card h3 {
+    color: var(--bleu-fonce);
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.chauffage-card p {
+    color: var(--gris);
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   PILOTAGE
+========================= */
+
+.connecte {
+    background: var(--bleu-clair);
+}
+
+.connecte-grid {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.telephone-card {
+    background: white;
+    border-radius: 30px;
+    padding: 38px;
+    box-shadow: var(--ombre);
+    text-align: center;
+}
+
+.telephone-icon {
+    font-size: 85px;
+    margin-bottom: 15px;
+}
+
+.connecte h2 {
+    color: var(--bleu-fonce);
+    font-size: 39px;
+    line-height: 1.1;
+    margin-bottom: 17px;
+}
+
+.connecte p {
+    color: var(--gris);
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.connecte-list {
+    list-style: none;
+}
+
+.connecte-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--bordure);
+    font-weight: bold;
+    color: var(--bleu-fonce);
+}
+
+.connecte-list li::before {
+    content: "✓";
+    color: var(--vert);
+    margin-right: 9px;
+}
+
+
+/* =========================
+   POURQUOI NOUS
+========================= */
+
+.avantages {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 18px;
+}
+
+.avantage {
+    padding: 27px;
+    border: 1px solid var(--bordure);
+    border-radius: 20px;
+}
+
+.avantage-icon {
+    font-size: 31px;
+    margin-bottom: 12px;
+}
+
+.avantage h3 {
+    color: var(--bleu-fonce);
+    margin-bottom: 8px;
+}
+
+.avantage p {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+
+/* =========================
+   ETAPES
+========================= */
+
+.etapes-section {
+    background: var(--bleu-tres-clair);
+}
+
+.etapes {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 18px;
+}
+
+.etape {
+    background: white;
+    padding: 28px;
+    border: 1px solid var(--bordure);
+    border-radius: 20px;
+}
+
+.numero {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--bleu);
+    color: white;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.etape h3 {
+    color: var(--bleu-fonce);
+    margin-bottom: 8px;
+}
+
+.etape p {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+
+/* =========================
+   QUALIFICATION
+========================= */
+
+.confiance {
+    background: white;
+}
+
+.confiance-box {
+    background: var(--bleu-clair);
+    border-radius: 25px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 25px;
+    align-items: center;
+}
+
+.confiance-icon {
+    font-size: 60px;
+}
+
+.confiance h2 {
+    color: var(--bleu-fonce);
+    font-size: 31px;
+    margin-bottom: 10px;
+}
+
+.confiance p {
+    color: var(--gris);
+}
+
+.attention {
+    font-size: 13px !important;
+    margin-top: 12px;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.faq {
+    background: var(--bleu-tres-clair);
+}
+
+.faq-list {
+    max-width: 850px;
+    margin: auto;
+}
+
+details {
+    background: white;
+    border: 1px solid var(--bordure);
+    border-radius: 15px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 800;
+    color: var(--bleu-fonce);
+}
+
+details p {
+    color: var(--gris);
+    font-size: 15px;
+    margin-top: 13px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    background: linear-gradient(135deg, var(--bleu), #075c8e);
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 43px;
+    line-height: 1.1;
+    margin-bottom: 13px;
+}
+
+.cta p {
+    color: #dceff8;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 25px;
+}
+
+.contact-box,
+.formulaire {
+    border: 1px solid var(--bordure);
+    border-radius: 22px;
+    padding: 30px;
+}
+
+.contact-box h3,
+.formulaire h3 {
+    color: var(--bleu-fonce);
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.ligne-contact {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--bordure);
+}
+
+.ligne-contact strong {
+    display: block;
+    color: var(--bleu-fonce);
+}
+
+.ligne-contact a {
+    color: var(--bleu);
+    font-weight: bold;
+}
+
+form {
+    display: grid;
+    gap: 14px;
+}
+
+label {
+    display: block;
+    color: var(--bleu-fonce);
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbdbe5;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 125px;
+    resize: vertical;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #071e30;
+    color: #b9cad5;
+    padding: 32px 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    color: white;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.footer-logo span {
+    color: #70c7f3;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px) {
 
     nav {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      font-weight: bold;
-      font-size: 14px;
+        display: none;
     }
 
-    nav a:hover {
-      color: var(--bleu);
+    .mobile-call {
+        display: block;
     }
 
-    .telephone {
-      background: var(--bleu-fonce);
-      color: white;
-      padding: 11px 17px;
-      border-radius: 10px;
+    .hero-grid,
+    .expliqe-grid,
+    .expliqe-grid,
+    .chauffage-grid,
+    .connecte-grid,
+    .contact {
+        grid-template-columns: 1fr;
     }
 
-    /* HERO */
+    .forfaits-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .avantages,
+    .etapes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media(max-width:600px) {
+
+    section {
+        padding: 60px 0;
+    }
 
     .hero {
-      background: linear-gradient(135deg, #f7fcff, var(--bleu-clair));
-      padding: 85px 0;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .sur-titre {
-      color: var(--bleu);
-      text-transform: uppercase;
-      font-weight: bold;
-      letter-spacing: 1px;
-      font-size: 13px;
-      margin-bottom: 15px;
+        padding: 55px 0;
     }
 
     h1 {
-      color: var(--bleu-fonce);
-      font-size: clamp(43px, 6vw, 68px);
-      line-height: 1.02;
-      letter-spacing: -2px;
-      margin-bottom: 22px;
+        font-size: 46px;
     }
 
-    h1 span {
-      color: var(--bleu);
-    }
-
-    .hero-text {
-      color: var(--gris);
-      font-size: 19px;
-      max-width: 650px;
-      margin-bottom: 30px;
-    }
-
-    .boutons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .bouton {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      padding: 15px 23px;
-      border-radius: 12px;
-      font-weight: bold;
-    }
-
-    .bouton-principal {
-      background: var(--bleu);
-      color: white;
-    }
-
-    .bouton-secondaire {
-      background: white;
-      border: 1px solid var(--bordure);
-      color: var(--bleu-fonce);
-    }
-
-    /* CARTE PRIX */
-
-    .carte-prix {
-      background: white;
-      border-radius: 25px;
-      padding: 32px;
-      box-shadow: 0 20px 55px rgba(8,45,73,.13);
-      border: 1px solid #e3edf2;
-    }
-
-    .clim-icon {
-      font-size: 45px;
-    }
-
-    .carte-prix h2 {
-      color: var(--bleu-fonce);
-      margin: 8px 0;
-      font-size: 25px;
-    }
-
-    .prix {
-      color: var(--bleu);
-      font-size: 46px;
-      font-weight: 900;
-      letter-spacing: -2px;
-    }
-
-    .prix small {
-      font-size: 17px;
-      color: var(--gris);
-      letter-spacing: 0;
-    }
-
-    .liste {
-      list-style: none;
-      margin: 20px 0;
-    }
-
-    .liste li {
-      padding: 8px 0;
-      border-bottom: 1px solid #edf3f6;
-    }
-
-    .liste li::before {
-      content: "✓";
-      color: var(--bleu);
-      font-weight: bold;
-      margin-right: 10px;
-    }
-
-    .largeur {
-      width: 100%;
-    }
-
-    /* SECTIONS */
-
-    section {
-      padding: 80px 0;
-    }
-
-    .titre-section {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 45px;
-    }
-
-    .titre-section h2 {
-      color: var(--bleu-fonce);
-      font-size: 38px;
-      line-height: 1.1;
-      margin-bottom: 12px;
-    }
-
-    .titre-section p {
-      color: var(--gris);
-      font-size: 17px;
-    }
-
-    /* AVANTAGES */
-
-    .avantages {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 18px;
-    }
-
-    .avantage {
-      padding: 27px;
-      border: 1px solid var(--bordure);
-      border-radius: 20px;
-    }
-
-    .icone {
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
-
-    .avantage h3 {
-      color: var(--bleu-fonce);
-      margin-bottom: 8px;
-    }
-
-    .avantage p {
-      color: var(--gris);
-      font-size: 14px;
-    }
-
-    /* OFFRE */
-
-    .offre {
-      background: var(--bleu-fonce);
-      color: white;
-    }
-
-    .offre-grid {
-      display: grid;
-      grid-template-columns: 1fr .9fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .offre h2 {
-      font-size: 42px;
-      line-height: 1.1;
-      margin-bottom: 18px;
-    }
-
-    .offre p {
-      color: #cbdce8;
-      font-size: 17px;
-    }
-
-    .offre-liste {
-      list-style: none;
-      margin-top: 25px;
-    }
-
-    .offre-liste li {
-      padding: 9px 0;
-      border-bottom: 1px solid rgba(255,255,255,.12);
-    }
-
-    .offre-liste li::before {
-      content: "✓";
-      color: #70c7f3;
-      margin-right: 10px;
-      font-weight: bold;
-    }
-
-    .boite-offre {
-      background: white;
-      color: var(--texte);
-      border-radius: 23px;
-      padding: 30px;
-    }
-
-    .boite-offre .grand-prix {
-      color: var(--bleu);
-      font-size: 47px;
-      font-weight: 900;
-    }
-
-    /* ETAPES */
-
+    .forfaits-grid,
+    .avantages,
     .etapes {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 18px;
-    }
-
-    .etape {
-      padding: 28px;
-      background: #f7fbfe;
-      border: 1px solid var(--bordure);
-      border-radius: 20px;
-    }
-
-    .numero {
-      width: 39px;
-      height: 39px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--bleu);
-      color: white;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-
-    .etape h3 {
-      color: var(--bleu-fonce);
-      margin-bottom: 8px;
-    }
-
-    .etape p {
-      color: var(--gris);
-      font-size: 14px;
-    }
-
-    /* CTA */
-
-    .cta {
-      background: var(--bleu-clair);
-      text-align: center;
-    }
-
-    .cta h2 {
-      color: var(--bleu-fonce);
-      font-size: 42px;
-      line-height: 1.1;
-      margin-bottom: 13px;
-    }
-
-    .cta p {
-      color: var(--gris);
-      margin-bottom: 25px;
-    }
-
-    /* CONTACT */
-
-    .contact {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 25px;
-    }
-
-    .contact-box,
-    .formulaire {
-      border: 1px solid var(--bordure);
-      border-radius: 20px;
-      padding: 30px;
-    }
-
-    .contact-box h3,
-    .formulaire h3 {
-      color: var(--bleu-fonce);
-      font-size: 25px;
-      margin-bottom: 15px;
-    }
-
-    .ligne-contact {
-      padding: 15px 0;
-      border-bottom: 1px solid var(--bordure);
-    }
-
-    .ligne-contact strong {
-      display: block;
-      color: var(--bleu-fonce);
-    }
-
-    .ligne-contact a {
-      color: var(--bleu);
-      font-weight: bold;
-    }
-
-    form {
-      display: grid;
-      gap: 14px;
-    }
-
-    label {
-      display: block;
-      font-weight: bold;
-      font-size: 14px;
-      color: var(--bleu-fonce);
-      margin-bottom: 5px;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #cbdbe5;
-      border-radius: 10px;
-      font-family: inherit;
-      font-size: 15px;
-    }
-
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #071e30;
-      color: #b9cad5;
-      padding: 30px 0;
-    }
-
-    .footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .footer-logo {
-      color: white;
-      font-size: 21px;
-      font-weight: bold;
-    }
-
-    .footer-logo span {
-      color: #72c8f3;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 850px) {
-
-      nav {
-        display: none;
-      }
-
-      .hero-grid,
-      .offre-grid,
-      .contact {
         grid-template-columns: 1fr;
-      }
-
-      .avantages,
-      .etapes {
-        grid-template-columns: 1fr 1fr;
-      }
-
     }
 
-    @media (max-width: 560px) {
-
-      section {
-        padding: 60px 0;
-      }
-
-      .avantages,
-      .etapes {
+    .expliqe-grid,
+    .chauffage-grid,
+    .connecte-grid {
         grid-template-columns: 1fr;
-      }
+    }
 
-      .hero {
-        padding: 55px 0;
-      }
-
-      h1 {
-        font-size: 45px;
-      }
-
-      .offre h2,
-      .cta h2,
-      .titre-section h2 {
+    .titre-section h2,
+    .expliqe h2,
+    .connecte h2 {
         font-size: 32px;
-      }
-
-      .prix,
-      .boite-offre .grand-prix {
-        font-size: 40px;
-      }
-
     }
-  </style>
+
+    .chauffage h2,
+    .cta h2 {
+        font-size: 34px;
+    }
+
+    .hero-price {
+        font-size: 36px;
+    }
+
+    .confiance-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
-  <div class="container nav">
 
-    <a href="#" class="logo">
-      Normandie<span>Clim</span>
-    </a>
+<div class="container nav">
 
-    <nav>
-      <a href="#offre">Notre offre</a>
-      <a href="#fonctionnement">Comment ça marche</a>
-      <a href="#contact">Contact</a>
-      <a class="telephone" href="tel:+33608358509">
-        06 08 35 85 09
-      </a>
-    </nav>
+<a href="#" class="logo">
+Normandie<span>Clim</span>
+</a>
 
-    <a class="telephone" href="tel:+33608358509">
-      Appeler
-    </a>
+<nav>
 
-  </div>
+<a href="#forfaits">
+Nos forfaits
+</a>
+
+<a href="#chauffage">
+Chauffage & fraîcheur
+</a>
+
+<a href="#fonctionnement">
+Comment ça marche
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+<a class="telephone" href="tel:+33608358509">
+06 08 35 85 09
+</a>
+
+</nav>
+
+<a class="telephone mobile-call" href="tel:+33608358509">
+Appeler
+</a>
+
+</div>
+
 </header>
 
 
 <main>
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
-  <div class="container hero-grid">
+<div class="container hero-grid">
 
-    <div>
+<div>
 
-      <div class="sur-titre">
-        Climatisation en Normandie
-      </div>
+<div class="sur-titre">
+Climatisation réversible en Normandie
+</div>
 
-      <h1>
-        La climatisation.<br>
-        <span>Simplement.</span>
-      </h1>
+<h1>
+Votre confort.<br>
+<span>Été comme hiver.</span>
+</h1>
 
-      <p class="hero-text">
-        Installation de climatisation monosplit 3,5 kW
-        avec une offre claire, un prix transparent
-        et une pose professionnelle.
-      </p>
+<p class="hero-text">
 
-      <div class="boutons">
+Une climatisation réversible adaptée à votre pièce,
+avec <strong>pose et mise en service tout compris</strong>.
+Choisissez simplement la formule adaptée à la taille de votre pièce.
 
-        <a href="#contact"
-           class="bouton bouton-principal">
-          Demander un devis
-        </a>
+</p>
 
-        <a href="tel:+33608358509"
-           class="bouton bouton-secondaire">
-          📞 06 08 35 85 09
-        </a>
+<div class="boutons">
 
-      </div>
+<a href="#forfaits" class="bouton bouton-principal">
+Voir les forfaits
+</a>
 
-    </div>
+<a href="tel:+33608358509" class="bouton bouton-secondaire">
+📞 06 08 35 85 09
+</a>
+
+</div>
+
+<div class="hero-points">
+
+<span>Pose professionnelle</span>
+
+<span>Chauffage & fraîcheur</span>
+
+<span>Pilotage à distance</span>
+
+</div>
+
+</div>
 
 
-    <div class="carte-prix">
+<div class="hero-card">
 
-      <div class="clim-icon">
-        ❄️
-      </div>
+<div class="hero-image">
 
-      <h2>
-        Monosplit 3,5 kW
-      </h2>
+<img src="image/pic2.png"
+alt="Climatisation réversible installée dans un salon">
 
-      <div class="prix">
-        1 490 € <small>TTC</small>
-      </div>
+</div>
 
-      <p>
-        Fourniture + installation
-      </p>
+<div class="hero-card-content">
 
-      <ul class="liste">
+<h2>
+Climatisation réversible
+</h2>
 
-        <li>Climatisation 3,5 kW</li>
-        <li>Support mural</li>
-        <li>Liaisons frigorifiques</li>
-        <li>Installation complète</li>
-        <li>Mise en service</li>
+<p class="hero-card-text">
+Pour votre salon ou votre pièce de vie.
+</p>
 
-      </ul>
+<div class="hero-price">
+À partir de 1 290 € <small>TTC</small>
+</div>
 
-      <a href="#contact"
-         class="bouton bouton-principal largeur">
-        Obtenir mon devis
-      </a>
+<br>
 
-    </div>
+<a href="#forfaits"
+class="bouton bouton-principal largeur">
+Découvrir nos forfaits
+</a>
 
-  </div>
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- AVANTAGES -->
+<!-- =========================
+     EXPLICATION
+========================= -->
+
+<section class="expliqe">
+
+<div class="container explique-grid">
+
+<div>
+
+<div class="sur-titre">
+La climatisation, simplement
+</div>
+
+<h2>
+Une seule installation,
+deux fonctions.
+</h2>
+
+<p>
+
+Une climatisation réversible ne sert pas seulement
+à rafraîchir votre logement en été.
+
+</p>
+
+<p>
+
+Elle peut également fonctionner en mode chauffage
+pendant les périodes plus fraîches.
+
+</p>
+
+<p>
+
+Vous profitez ainsi d'un appareil qui adapte
+la température de votre pièce selon la saison.
+
+</p>
+
+<a href="#contact"
+class="bouton bouton-principal">
+Parler de mon projet
+</a>
+
+</div>
+
+
+<div class="explication-card">
+
+<div class="explication-item">
+
+<div class="explication-icon">
+❄️
+</div>
+
+<div>
+
+<strong>
+En été : de la fraîcheur
+</strong>
+
+<p>
+Rafraîchissez rapidement votre salon,
+votre chambre ou votre pièce de vie.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="explication-item">
+
+<div class="explication-icon">
+☀️
+</div>
+
+<div>
+
+<strong>
+En hiver : du chauffage
+</strong>
+
+<p>
+Le fonctionnement réversible permet également
+de produire de la chaleur.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="explication-item">
+
+<div class="explication-icon">
+📱
+</div>
+
+<div>
+
+<strong>
+Depuis votre smartphone
+</strong>
+
+<p>
+Sur les appareils compatibles, vous pouvez
+piloter votre confort à distance.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="explication-item">
+
+<div class="explication-icon">
+💶
+</div>
+
+<div>
+
+<strong>
+Une consommation à maîtriser
+</strong>
+
+<p>
+Une pompe à chaleur air-air peut produire
+de la chaleur avec une consommation électrique
+maîtrisée, selon le logement et son utilisation.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FORFAITS
+========================= -->
+
+<section id="forfaits" class="forfaits">
+
+<div class="container">
+
+<div class="titre-section">
+
+<div class="sur-titre">
+Nos forfaits
+</div>
+
+<h2>
+Quel modèle pour votre pièce ?
+</h2>
+
+<p>
+
+Pas besoin d'être spécialiste.
+Choisissez votre pièce et nous vérifions ensuite
+que la solution est adaptée à votre logement.
+
+</p>
+
+</div>
+
+
+<div class="forfaits-grid">
+
+
+<!-- FORFAIT 1 -->
+
+<div class="forfait">
+
+<div class="forfait-image">
+
+<img src="image/pic1.png"
+alt="Climatisation réversible dans une chambre">
+
+</div>
+
+<div class="forfait-content">
+
+<div class="forfait-tag">
+PETITE PIÈCE
+</div>
+
+<h3>
+Confort Essentiel
+</h3>
+
+<div class="forfait-surface">
+Chambre ou pièce jusqu'à environ 25 m²
+</div>
+
+<div class="forfait-price">
+1 290 € <small>TTC</small>
+</div>
+
+<ul>
+
+<li>Climatisation réversible 2,5 kW</li>
+
+<li>Pose complète</li>
+
+<li>Mise en service</li>
+
+<li>Explications et prise en main</li>
+
+</ul>
+
+<a href="#contact"
+class="bouton bouton-principal largeur">
+Choisir cette formule
+</a>
+
+</div>
+
+</div>
+
+
+<!-- FORFAIT 2 -->
+
+<div class="forfait forfait-populaire">
+
+<div class="badge">
+LE PLUS DEMANDÉ
+</div>
+
+<div class="forfait-image">
+
+<img src="image/pic2.png"
+alt="Climatisation réversible dans un salon">
+
+</div>
+
+<div class="forfait-content">
+
+<div class="forfait-tag">
+SALON
+</div>
+
+<h3>
+Confort Plus
+</h3>
+
+<div class="forfait-surface">
+Salon ou pièce jusqu'à environ 35 m²
+</div>
+
+<div class="forfait-price">
+1 490 € <small>TTC</small>
+</div>
+
+<ul>
+
+<li>Climatisation réversible 3,5 kW</li>
+
+<li>Pose complète</li>
+
+<li>Mise en service</li>
+
+<li>Explications et prise en main</li>
+
+</ul>
+
+<a href="#contact"
+class="bouton bouton-principal largeur">
+Choisir cette formule
+</a>
+
+</div>
+
+</div>
+
+
+<!-- FORFAIT 3 -->
+
+<div class="forfait">
+
+<div class="forfait-image">
+
+<img src="image/pic3.png"
+alt="Climatisation réversible dans une grande pièce">
+
+</div>
+
+<div class="forfait-content">
+
+<div class="forfait-tag">
+GRANDE PIÈCE
+</div>
+
+<h3>
+Confort Grande Pièce
+</h3>
+
+<div class="forfait-surface">
+Grande pièce jusqu'à environ 50 m²
+</div>
+
+<div class="forfait-price">
+1 790 € <small>TTC</small>
+</div>
+
+<ul>
+
+<li>Climatisation réversible 5 kW</li>
+
+<li>Pose complète</li>
+
+<li>Mise en service</li>
+
+<li>Explications et prise en main</li>
+
+</ul>
+
+<a href="#contact"
+class="bouton bouton-principal largeur">
+Choisir cette formule
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<p style="text-align:center;color:#657687;font-size:13px;margin-top:25px">
+
+Les surfaces indiquées sont données à titre indicatif.
+Le choix de la puissance dépend également de l'isolation,
+de l'exposition, des vitrages et de la configuration de la pièce.
+Une vérification est réalisée avant toute installation.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CHAUFFAGE
+========================= -->
+
+<section id="chauffage" class="chauffage">
+
+<div class="container chauffage-grid">
+
+<div>
+
+<div class="sur-titre" style="color:#70c7f3">
+Bien plus qu'une climatisation
+</div>
+
+<h2>
+L'été, vous rafraîchissez.<br>
+<span>L'hiver, vous chauffez.</span>
+</h2>
+
+<p class="chauffage-text">
+
+La climatisation réversible est en réalité une
+<strong>pompe à chaleur air-air</strong> :
+elle peut transférer la chaleur dans un sens
+ou dans l'autre selon la saison.
+
+</p>
+
+
+<div class="chauffage-points">
+
+<div class="chauffage-point">
+
+<div class="chauffage-point-icon">
+❄️
+</div>
+
+<div>
+
+<strong>
+Un été plus confortable
+</strong>
+
+<p>
+Profitez d'une température agréable lorsque
+les fortes chaleurs arrivent.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="chauffage-point">
+
+<div class="chauffage-point-icon">
+🔥
+</div>
+
+<div>
+
+<strong>
+Un chauffage complémentaire
+</strong>
+
+<p>
+Utilisez votre appareil en mode chauffage
+lorsque les températures baissent.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="chauffage-point">
+
+<div class="chauffage-point-icon">
+⚡
+</div>
+
+<div>
+
+<strong>
+Une consommation optimisée
+</strong>
+
+<p>
+Une pompe à chaleur air-air peut être intéressante
+pour chauffer efficacement une pièce, notamment
+en complément ou en remplacement d'un chauffage électrique,
+selon le logement.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="chauffage-card">
+
+<h3>
+Pourquoi réversible ?
+</h3>
+
+<p>
+
+Parce qu'un seul appareil peut assurer
+le rafraîchissement et le chauffage de votre pièce.
+
+</p>
+
+<p>
+
+Vous n'avez donc pas besoin d'installer
+deux systèmes différents pour profiter
+d'un confort toute l'année.
+
+</p>
+
+<a href="#contact"
+class="bouton bouton-principal">
+Étudier mon logement
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PILOTAGE
+========================= -->
+
+<section class="connecte">
+
+<div class="container connecte-grid">
+
+<div class="telephone-card">
+
+<div class="telephone-icon">
+📱
+</div>
+
+<strong style="color:#082d49;font-size:20px">
+Votre climatisation dans votre poche
+</strong>
+
+<p style="font-size:14px;margin-top:8px">
+Sur les modèles compatibles et connectés.
+</p>
+
+</div>
+
+
+<div>
+
+<div class="sur-titre">
+Confort connecté
+</div>
+
+<h2>
+Pilotez votre confort,
+même à distance.
+</h2>
+
+<p>
+
+Certains modèles peuvent être connectés
+à votre smartphone. Vous pouvez ainsi gérer
+votre climatisation depuis une application.
+
+</p>
+
+<ul class="connecte-list">
+
+<li>Régler la température</li>
+
+<li>Mettre en marche avant votre arrivée</li>
+
+<li>Modifier le mode chauffage ou rafraîchissement</li>
+
+<li>Programmer votre appareil</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     AVANTAGES
+========================= -->
 
 <section>
 
-  <div class="container">
+<div class="container">
 
-    <div class="titre-section">
+<div class="titre-section">
 
-      <h2>
-        Une offre volontairement simple
-      </h2>
+<div class="sur-titre">
+Pourquoi NormandieClim ?
+</div>
 
-      <p>
-        Une solution monosplit performante,
-        sans catalogue compliqué ni options inutiles.
-      </p>
+<h2>
+Une installation simple,
+un interlocuteur unique.
+</h2>
 
-    </div>
+<p>
+Nous faisons le choix de nous concentrer sur
+la climatisation monosplit pour proposer une offre
+claire et maîtrisée.
+</p>
 
-
-    <div class="avantages">
-
-      <div class="avantage">
-
-        <div class="icone">💶</div>
-
-        <h3>
-          Prix transparent
-        </h3>
-
-        <p>
-          Une offre claire avec fourniture
-          et installation comprises.
-        </p>
-
-      </div>
+</div>
 
 
-      <div class="avantage">
-
-        <div class="icone">🔧</div>
-
-        <h3>
-          Pose soignée
-        </h3>
-
-        <p>
-          Une installation propre et réalisée
-          dans les règles professionnelles.
-        </p>
-
-      </div>
+<div class="avantages">
 
 
-      <div class="avantage">
+<div class="avantage">
 
-        <div class="icone">❄️</div>
+<div class="avantage-icon">
+💶
+</div>
 
-        <h3>
-          Confort toute l'année
-        </h3>
+<h3>
+Des prix clairs
+</h3>
 
-        <p>
-          Climatisation réversible pour rafraîchir
-          en été et chauffer en complément.
-        </p>
+<p>
+Trois forfaits simples pour vous donner
+une première idée du budget.
+</p>
 
-      </div>
-
-
-      <div class="avantage">
-
-        <div class="icone">🤝</div>
-
-        <h3>
-          Un seul interlocuteur
-        </h3>
-
-        <p>
-          De votre demande de devis à la mise
-          en service, un contact unique.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
+</div>
 
 
-<!-- OFFRE -->
+<div class="avantage">
 
-<section id="offre" class="offre">
+<div class="avantage-icon">
+🔧
+</div>
 
-  <div class="container offre-grid">
+<h3>
+Une pose soignée
+</h3>
 
-    <div>
+<p>
+Nous accordons une attention particulière
+à la qualité et à la finition de l'installation.
+</p>
 
-      <div class="sur-titre" style="color:#70c7f3">
-        L'offre NormandieClim
-      </div>
-
-      <h2>
-        Tout ce qu'il faut.<br>
-        Rien de superflu.
-      </h2>
-
-      <p>
-        Nous avons conçu une offre simple pour faciliter
-        votre projet et vous permettre de connaître
-        rapidement votre budget.
-      </p>
-
-      <ul class="offre-liste">
-
-        <li>Climatisation monosplit 3,5 kW</li>
-        <li>Fourniture du matériel</li>
-        <li>Support et liaisons frigorifiques</li>
-        <li>Pose et raccordements</li>
-        <li>Mise en service</li>
-
-      </ul>
-
-    </div>
+</div>
 
 
-    <div class="boite-offre">
+<div class="avantage">
 
-      <strong>
-        OFFRE MONOSPLIT 3,5 kW
-      </strong>
+<div class="avantage-icon">
+🏠
+</div>
 
-      <div class="grand-prix">
-        1 490 € TTC
-      </div>
+<h3>
+Une solution adaptée
+</h3>
 
-      <p>
-        Installation comprise*
-      </p>
+<p>
+La puissance définitive est vérifiée en fonction
+de votre logement avant l'installation.
+</p>
 
-      <br>
+</div>
 
-      <a href="#contact"
-         class="bouton bouton-principal largeur">
-        Demander un devis
-      </a>
 
-      <p style="font-size:12px;margin-top:14px;color:#657687">
-        *Tarif indicatif pour une installation standard,
-        sous réserve de faisabilité technique.
-        Les conditions exactes sont précisées sur le devis.
-      </p>
+<div class="avantage">
 
-    </div>
+<div class="avantage-icon">
+🤝
+</div>
 
-  </div>
+<h3>
+Un seul interlocuteur
+</h3>
+
+<p>
+De votre demande jusqu'à la mise en service,
+vous échangez directement avec NormandieClim.
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- FONCTIONNEMENT -->
+<!-- =========================
+     ETAPES
+========================= -->
 
-<section id="fonctionnement">
+<section id="fonctionnement" class="etapes-section">
 
-  <div class="container">
+<div class="container">
 
-    <div class="titre-section">
+<div class="titre-section">
 
-      <h2>
-        Comment ça marche ?
-      </h2>
+<div class="sur-titre">
+Simple du début à la fin
+</div>
 
-      <p>
-        Un parcours simple, du premier contact
-        à la mise en service.
-      </p>
+<h2>
+Comment se passe votre projet ?
+</h2>
 
-    </div>
+<p>
+Pas besoin de connaître la technique.
+Nous vous accompagnons étape par étape.
+</p>
 
-
-    <div class="etapes">
-
-      <div class="etape">
-
-        <div class="numero">1</div>
-
-        <h3>
-          Votre demande
-        </h3>
-
-        <p>
-          Vous nous contactez par téléphone
-          ou via le formulaire en ligne.
-        </p>
-
-      </div>
+</div>
 
 
-      <div class="etape">
-
-        <div class="numero">2</div>
-
-        <h3>
-          Étude du projet
-        </h3>
-
-        <p>
-          Nous échangeons sur votre logement
-          et l'emplacement souhaité.
-        </p>
-
-      </div>
+<div class="etapes">
 
 
-      <div class="etape">
+<div class="etape">
 
-        <div class="numero">3</div>
+<div class="numero">
+1
+</div>
 
-        <h3>
-          Installation
-        </h3>
+<h3>
+Vous nous contactez
+</h3>
 
-        <p>
-          La pose est réalisée proprement
-          selon les caractéristiques du chantier.
-        </p>
+<p>
+Téléphone, email ou formulaire :
+expliquez-nous simplement votre projet.
+</p>
 
-      </div>
+</div>
 
 
-      <div class="etape">
+<div class="etape">
 
-        <div class="numero">4</div>
+<div class="numero">
+2
+</div>
 
-        <h3>
-          Mise en service
-        </h3>
+<h3>
+Nous étudions votre pièce
+</h3>
 
-        <p>
-          Votre installation est mise en route
-          et son fonctionnement vous est expliqué.
-        </p>
+<p>
+Surface, exposition, isolation et configuration :
+nous vérifions la solution adaptée.
+</p>
 
-      </div>
+</div>
 
-    </div>
 
-  </div>
+<div class="etape">
+
+<div class="numero">
+3
+</div>
+
+<h3>
+Nous installons
+</h3>
+
+<p>
+La pose est réalisée avec soin,
+avec l'unité intérieure et l'unité extérieure.
+</p>
+
+</div>
+
+
+<div class="etape">
+
+<div class="numero">
+4
+</div>
+
+<h3>
+Vous profitez
+</h3>
+
+<p>
+Mise en service, explications et prise en main
+de votre nouvelle climatisation.
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- CTA -->
+<!-- =========================
+     CONFIANCE
+========================= -->
+
+<section class="confiance">
+
+<div class="container">
+
+<div class="confiance-box">
+
+<div class="confiance-icon">
+🛠️
+</div>
+
+<div>
+
+<h2>
+Une installation réalisée par un professionnel
+</h2>
+
+<p>
+
+La manipulation des fluides frigorigènes est une
+activité réglementée. NormandieClim se forme et
+s'équipe pour réaliser les installations et mises
+en service dans le respect des exigences applicables.
+
+</p>
+
+<p class="attention">
+
+Les qualifications et attestations applicables
+seront précisées sur le site dès leur obtention.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="faq">
+
+<div class="container">
+
+<div class="titre-section">
+
+<div class="sur-titre">
+Questions fréquentes
+</div>
+
+<h2>
+Vous vous posez des questions ?
+</h2>
+
+</div>
+
+
+<div class="faq-list">
+
+
+<details>
+
+<summary>
+Quelle climatisation choisir pour mon salon ?
+</summary>
+
+<p>
+
+La puissance dépend notamment de la surface,
+de l'isolation, de l'exposition et des ouvertures.
+Nos forfaits donnent une première indication,
+puis nous vérifions la puissance adaptée à votre pièce.
+
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Une climatisation peut-elle vraiment chauffer ?
+</summary>
+
+<p>
+
+Oui. Un climatiseur réversible est une pompe à chaleur
+air-air capable de fonctionner en mode rafraîchissement
+comme en mode chauffage.
+
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Est-ce que la climatisation consomme beaucoup d'électricité ?
+</summary>
+
+<p>
+
+La consommation dépend du modèle, de la température
+demandée, de l'isolation du logement et de votre utilisation.
+Les appareils modernes à technologie Inverter adaptent
+leur fonctionnement aux besoins de la pièce.
+
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Puis-je contrôler ma climatisation avec mon téléphone ?
+</summary>
+
+<p>
+
+Oui, lorsque le modèle choisi dispose d'une connexion Wi-Fi
+ou d'un module compatible. Vous pouvez alors utiliser
+l'application du fabricant pour piloter votre appareil.
+
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Est-ce que le prix affiché comprend la pose ?
+</summary>
+
+<p>
+
+Oui. Nos forfaits sont présentés avec la pose et la mise
+en service comprises pour une installation standard.
+La faisabilité et les conditions exactes sont vérifiées
+avant l'établissement du devis.
+
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Puis-je climatiser plusieurs pièces ?
+</summary>
+
+<p>
+
+Notre offre de départ est volontairement centrée sur
+le monosplit : une unité intérieure pour une pièce.
+Pour plusieurs pièces, contactez-nous afin d'étudier
+votre projet.
+
+</p>
+
+</details>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
 
 <section class="cta">
 
-  <div class="container">
+<div class="container">
 
-    <h2>
-      Envie de retrouver du confort chez vous ?
-    </h2>
+<h2>
+Prêt à améliorer votre confort ?
+</h2>
 
-    <p>
-      Parlons de votre projet de climatisation.
-    </p>
+<p>
+Décrivez-nous votre pièce et nous vous aiderons
+à déterminer la solution adaptée.
+</p>
 
-    <a href="#contact"
-       class="bouton bouton-principal">
-      Demander un devis gratuitement
-    </a>
+<a href="#contact"
+class="bouton bouton-secondaire">
+Demander mon devis
+</a>
 
-  </div>
+</div>
 
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section id="contact">
 
-  <div class="container">
+<div class="container">
 
-    <div class="titre-section">
+<div class="titre-section">
 
-      <h2>
-        Votre projet commence ici
-      </h2>
+<div class="sur-titre">
+Votre projet commence ici
+</div>
 
-      <p>
-        Décrivez-nous votre besoin.
-        Nous vous recontactons pour étudier votre installation.
-      </p>
+<h2>
+Demandez votre devis
+</h2>
 
-    </div>
+<p>
+Quelques informations suffisent pour commencer.
+</p>
 
+</div>
 
-    <div class="contact">
 
+<div class="contact">
 
-      <div class="contact-box">
 
-        <h3>
-          Contactez-nous
-        </h3>
+<div class="contact-box">
 
-        <div class="ligne-contact">
+<h3>
+Contactez-nous
+</h3>
 
-          <strong>
-            📞 Téléphone
-          </strong>
 
-          <a href="tel:+33608358509">
-            06 08 35 85 09
-          </a>
+<div class="ligne-contact">
 
-        </div>
+<strong>
+📞 Téléphone
+</strong>
 
+<a href="tel:+33608358509">
+06 08 35 85 09
+</a>
 
-        <div class="ligne-contact">
+</div>
 
-          <strong>
-            ✉️ Email
-          </strong>
 
-          <a href="mailto:contact@normandieclim.fr">
-            contact@normandieclim.fr
-          </a>
+<div class="ligne-contact">
 
-        </div>
+<strong>
+✉️ Email
+</strong>
 
+<a href="mailto:contact@normandieclim.fr">
+contact@normandieclim.fr
+</a>
 
-        <div class="ligne-contact">
+</div>
 
-          <strong>
-            📍 Zone d'intervention
-          </strong>
 
-          Normandie et alentours
+<div class="ligne-contact">
 
-        </div>
+<strong>
+📍 Zone d'intervention
+</strong>
 
+Normandie et alentours
 
-        <p style="margin-top:20px;color:#657687;font-size:14px">
+</div>
 
-          Pour une demande de devis, indiquez votre commune,
-          la pièce à climatiser et, si possible, quelques photos
-          de l'intérieur et de l'extérieur.
 
-        </p>
+<p style="margin-top:20px;color:#657687;font-size:14px">
 
-      </div>
+Pour votre demande, indiquez simplement votre commune,
+la pièce concernée et sa superficie approximative.
+Si vous le souhaitez, vous pourrez également nous
+envoyer des photos de votre logement.
 
+</p>
 
-      <div class="formulaire">
+</div>
 
-        <h3>
-          Demande de devis
-        </h3>
 
-        <form action="mailto:contact@normandieclim.fr"
-              method="post"
-              enctype="text/plain">
+<div class="formulaire">
 
-          <div>
+<h3>
+Parlez-nous de votre projet
+</h3>
 
-            <label for="nom">
-              Nom
-            </label>
 
-            <input
-              id="nom"
-              name="Nom"
-              type="text"
-              required>
+<form action="mailto:contact@normandieclim.fr"
+method="post"
+enctype="text/plain">
 
-          </div>
 
+<div>
 
-          <div>
+<label for="nom">
+Nom
+</label>
 
-            <label for="telephone">
-              Téléphone
-            </label>
+<input
+id="nom"
+name="Nom"
+type="text"
+required>
 
-            <input
-              id="telephone"
-              name="Telephone"
-              type="tel"
-              required>
+</div>
 
-          </div>
 
+<div>
 
-          <div>
+<label for="telephone">
+Téléphone
+</label>
 
-            <label for="commune">
-              Commune
-            </label>
+<input
+id="telephone"
+name="Telephone"
+type="tel"
+required>
 
-            <input
-              id="commune"
-              name="Commune"
-              type="text"
-              required>
+</div>
 
-          </div>
 
+<div>
 
-          <div>
+<label for="email">
+Email
+</label>
 
-            <label for="projet">
-              Votre projet
-            </label>
+<input
+id="email"
+name="Email"
+type="email"
+required>
 
-            <select id="projet" name="Projet">
+</div>
 
-              <option>
-                Monosplit 3,5 kW
-              </option>
 
-              <option>
-                Je ne sais pas encore
-              </option>
+<div>
 
-              <option>
-                Autre demande
-              </option>
+<label for="commune">
+Commune
+</label>
 
-            </select>
+<input
+id="commune"
+name="Commune"
+type="text"
+required>
 
-          </div>
+</div>
 
 
-          <div>
+<div>
 
-            <label for="message">
-              Message
-            </label>
+<label for="surface">
+Surface approximative de la pièce
+</label>
 
-            <textarea
-              id="message"
-              name="Message"
-              placeholder="Décrivez brièvement votre besoin..."></textarea>
+<select
+id="surface"
+name="Surface">
 
-          </div>
+<option>
+Moins de 25 m²
+</option>
 
+<option>
+25 à 35 m²
+</option>
 
-          <button
-            class="bouton bouton-principal"
-            type="submit">
+<option>
+35 à 50 m²
+</option>
 
-            Envoyer ma demande
+<option>
+Plus de 50 m²
+</option>
 
-          </button>
+<option>
+Je ne sais pas
+</option>
 
-        </form>
+</select>
 
-      </div>
+</div>
 
-    </div>
 
-  </div>
+<div>
+
+<label for="message">
+Votre projet
+</label>
+
+<textarea
+id="message"
+name="Message"
+placeholder="Exemple : salon de 30 m², maison individuelle, chauffage électrique..."></textarea>
+
+</div>
+
+
+<button
+type="submit"
+class="bouton bouton-principal">
+
+Envoyer ma demande
+
+</button>
+
+
+<p style="font-size:12px;color:#657687">
+
+Les surfaces et tarifs présentés sur le site sont indicatifs
+et correspondent à une installation standard. Un devis
+précis sera établi après vérification de la faisabilité
+de votre projet.
+
+</p>
+
+
+</form>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
+
 
 </main>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-  <div class="container footer">
+<div class="container footer">
 
-    <div class="footer-logo">
-      Normandie<span>Clim</span>
-    </div>
+<div class="footer-logo">
+Normandie<span>Clim</span>
+</div>
 
-    <div>
-      © 2026 NormandieClim
-    </div>
+<div>
+© 2026 NormandieClim
+</div>
 
-    <div>
+<div>
 
-      <a href="mailto:contact@normandieclim.fr">
-        contact@normandieclim.fr
-      </a>
+<a href="mailto:contact@normandieclim.fr">
+contact@normandieclim.fr
+</a>
 
-      ·
+&nbsp;·&nbsp;
 
-      <a href="tel:+33608358509">
-        06 08 35 85 09
-      </a>
+<a href="tel:+33608358509">
+06 08 35 85 09
+</a>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </footer>
 
+
 </body>
 </html>
+```
